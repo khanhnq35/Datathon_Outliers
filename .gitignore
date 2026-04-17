@@ -9,11 +9,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Large Model Weights (if any)
-models/*.pkl
-models/*.h5
-models/*.bin
-
 # IDE
 .vscode/
 .idea/

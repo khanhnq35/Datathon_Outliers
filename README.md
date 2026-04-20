@@ -26,15 +26,15 @@ Datathon_Outliers/
 ├── Data/                   # Dữ liệu gốc (15 file CSV)
 ├── Document/               # Tài liệu hướng dẫn & Chiến lược
 │   ├── Problem/            # Đề bài gốc từ BTC
-│   ├── Business_Analytics.md # Phân tích góc nhìn kinh doanh
-│   ├── EDA_Guideline.md    # Hướng dẫn chi tiết các bước EDA
-│   ├── Forecasting_Guideline.md # Chiến lược xây dựng mô hình dự báo
-│   ├── Team_plan.md        # Kế hoạch thực hiện 10 ngày
-│   └── Workflow.md         # Quy trình làm việc & Tooling
+│   ├── Guideline/          # Các guidline chuẩn (EDA, Forecasting, AI trợ lý)
+│   ├── Plan_Report/        # Kế hoạch phân chia Team và tiến độ Jira
+│   └── khanhnq/            # Các ghi chú cá nhân của cá nhân (được Gitignore)
 ├── notebooks/              # Jupyter notebooks dành cho phân tích
-├── src/                    # Mã nguồn Python tái sử dụng
+├── src/                    # Mã nguồn Python tái sử dụng (Loader, Features)
+├── models/                 # Các file trọng số mô hình hoặc model dumps (.pkl, .h5)
 ├── figures/                # Các biểu đồ xuất ra cho báo cáo
-├── report/                 # Báo cáo cuối cùng (NeurIPS template)
+├── submissions/            # Các bản submit Kaggle csv
+├── report/                 # Báo cáo cuối cùng (NeurIPS template LaTeX)
 ├── requirements.txt        # Các thư viện cần thiết
 └── README.md
 ```
@@ -81,6 +81,20 @@ Datathon_Outliers/
 
 3.  **Khám phá Notebook**:
     Truy cập folder `notebooks/` để bắt đầu phân tích.
+
+---
+
+## 🌿 Quy trình Làm việc nhóm (Git & Tools)
+
+1.  **Sử dụng GitHub**:
+    - **Không commit thẳng vào `main`.**
+    - Mỗi cá nhân làm việc trên chi nhánh (branch) riêng có tên của bạn (ví dụ: `le-bao-khanh`).
+    - Lấy cập nhật chung từ nhánh chuẩn `develop`: `git pull origin develop`.
+    - Khi xong task báo Tech Lead (Nguyễn Quốc Khánh) review để merge code.
+2.  **AI Assistant (Antigravity)**:
+    - Team sử dụng AI để pair programming và tăng tốc xử lý dữ liệu. Tham khảo quy ước prompt chuẩn tại: `Document/Guideline/Antigravity_guideline.md`.
+3.  **Quản lý Task**: Cập nhật file `Document/Plan_Report/jira.md` hằng ngày trước 10:00 sáng.
+
 
 ---
 

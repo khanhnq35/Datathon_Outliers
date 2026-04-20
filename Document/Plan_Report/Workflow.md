@@ -8,23 +8,19 @@
 
 | Thành viên | Vai trò | Trách nhiệm chính |
 |-----------|---------|-------------------|
-| **Lê Bảo Khánh** | Business Analyst | EDA insights, viết report, storytelling |
-| **Nguyễn Quốc Khánh** | Tech Lead | Kiến trúc, Forecasting, code review, quyết định kỹ thuật |
-| **Lưu Nguyễn Thiện Nhân** | Data Engineer | Data pipeline, MCQ, EDA visualization |
-| **Hà Quốc Khánh** | ML Engineer | Feature engineering, Forecasting model, Kaggle submission |
+| **A** | Business Analyst | EDA insights, viết report, storytelling |
+| **B** | Tech Lead | Kiến trúc, Forecasting, code review, quyết định kỹ thuật |
+| **C** | Data Engineer | Data pipeline, MCQ, EDA visualization |
+| **D** | ML Engineer | Feature engineering, Forecasting model, Kaggle submission |
 
 ---
 
 ## 2. Quy tắc làm việc chung
 
 ### 2.1 Giao tiếp
-- **Kênh chính**: Group chat (messenger) — dùng cho trao đổi nhanh, cập nhật hàng ngày
-- **Cập nhật tiến độ**: Mỗi người gửi standup **trước 10:00 sáng** mỗi ngày theo format:
-  ```
-  ✅ Hôm qua đã làm: [...]
-  📌 Hôm nay sẽ làm: [...]
-  🚧 Blocker (nếu có): [...]
-  ```
+- **Kênh chính**: Group chat (messenger) — dùng cho trao đổi nhanh
+- **Cập nhật tiến độ**: Mỗi người cập nhật trạng thái task Jira **trước 10:00 sáng**
+
 
 ### 2.2 Nguyên tắc làm việc
 - **Ownership**: Mỗi task có 1 người chịu trách nhiệm chính (assignee). Không "ai cũng làm" = không ai làm
@@ -82,26 +78,7 @@ Datathon_Outliers/
 ```
 
 ### 3.2 Branching strategy
-```
-main (protected)
- ├── develop (integration branch)
- │    ├── feature/mcq-answers        (C)
- │    ├── feature/eda-revenue        (B)
- │    ├── feature/eda-customer       (C)
- │    ├── feature/eda-returns        (A)
- │    ├── feature/forecast-baseline  (D)
- │    ├── feature/forecast-lgbm     (D)
- │    └── feature/report             (A)
- └── hotfix/* (emergency fixes)
-```
-
-**Flow:**
-1. Tạo branch từ `develop`: `git checkout -b feature/ten-task develop`
-2. Commit thường xuyên (mỗi milestone nhỏ)
-3. Khi hoàn thành → tạo **Pull Request** (PR) vào `develop`
-4. Cần **ít nhất 1 approve** từ B (Lead) hoặc thành viên khác
-5. Merge bằng **Squash and Merge**
-6. `main` chỉ merge từ `develop` khi milestone lớn hoàn thành
+Mỗi người tạo 1 nhánh theo tên của mình, không merge vào main, xong task báo lead review
 
 ### 3.3 Commit message convention
 ```

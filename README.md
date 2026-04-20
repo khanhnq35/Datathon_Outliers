@@ -45,10 +45,10 @@ Datathon_Outliers/
 
 | Thành viên | Vai trò | Trách nhiệm chính |
 |-----------|---------|-------------------|
-| **A** | Business Analyst | EDA insights, Storytelling, Viết report |
-| **B** | Tech Lead | Kiến trúc hệ thống, Review code, Dự báo |
-| **C** | Data Engineer | Data pipeline, MCQ, EDA Visualization |
-| **D** | ML Engineer | Feature engineering, Mô hình Forecasting |
+| **Lê Bảo Khánh** | Business Analyst | EDA insights, Storytelling, Viết report |
+| **Nguyễn Quốc Khánh** | Tech Lead | Kiến trúc hệ thống, Review code, Dự báo |
+| **Lưu Nguyễn Thiện Nhân** | Data Engineer | Data pipeline, MCQ, EDA Visualization |
+| **Hà Quốc Khánh** | ML Engineer | Feature engineering, Mô hình Forecasting |
 
 ---
 

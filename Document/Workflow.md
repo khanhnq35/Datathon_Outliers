@@ -8,10 +8,10 @@
 
 | Thành viên | Vai trò | Trách nhiệm chính |
 |-----------|---------|-------------------|
-| **A** | Business Analyst | EDA insights, viết report, storytelling |
-| **B** | Tech Lead | Kiến trúc, Forecasting, code review, quyết định kỹ thuật |
-| **C** | Data Engineer | Data pipeline, MCQ, EDA visualization |
-| **D** | ML Engineer | Feature engineering, Forecasting model, Kaggle submission |
+| **Lê Bảo Khánh** | Business Analyst | EDA insights, viết report, storytelling |
+| **Nguyễn Quốc Khánh** | Tech Lead | Kiến trúc, Forecasting, code review, quyết định kỹ thuật |
+| **Lưu Nguyễn Thiện Nhân** | Data Engineer | Data pipeline, MCQ, EDA visualization |
+| **Hà Quốc Khánh** | ML Engineer | Feature engineering, Forecasting model, Kaggle submission |
 
 ---
 

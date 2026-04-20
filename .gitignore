@@ -16,3 +16,4 @@ Thumbs.db
 # Large Data (Optional but recommended to keep small files)
 # Following rule: files > 50MB are ignored
 # Currently no files in Data/ exceed 50MB.
+*.zip

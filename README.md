@@ -27,8 +27,7 @@ Datathon_Outliers/
 ├── Document/               # Tài liệu hướng dẫn & Chiến lược
 │   ├── Problem/            # Đề bài gốc từ BTC
 │   ├── Guideline/          # Các guidline chuẩn (EDA, Forecasting, AI trợ lý)
-│   ├── Plan_Report/        # Kế hoạch phân chia Team và tiến độ Jira
-│   └── khanhnq/            # Các ghi chú cá nhân của cá nhân (được Gitignore)
+│   └── Plan_Report/        # Kế hoạch phân chia Team và tiến độ Jira
 ├── notebooks/              # Jupyter notebooks dành cho phân tích
 ├── src/                    # Mã nguồn Python tái sử dụng (Loader, Features)
 ├── models/                 # Các file trọng số mô hình hoặc model dumps (.pkl, .h5)
@@ -89,7 +88,7 @@ Datathon_Outliers/
 1.  **Sử dụng GitHub**:
     - **Không commit thẳng vào `main`.**
     - Mỗi cá nhân làm việc trên chi nhánh (branch) riêng có tên của bạn (ví dụ: `le-bao-khanh`).
-    - Lấy cập nhật chung từ nhánh chuẩn `develop`: `git pull origin develop`.
+    - Lấy cập nhật chung từ nhánh chuẩn `main`: `git pull origin main`.
     - Khi xong task báo Tech Lead (Nguyễn Quốc Khánh) review để merge code.
 2.  **AI Assistant (Antigravity)**:
     - Team sử dụng AI để pair programming và tăng tốc xử lý dữ liệu. Tham khảo quy ước prompt chuẩn tại: `Document/Guideline/Antigravity_guideline.md`.

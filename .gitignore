@@ -18,3 +18,8 @@ Thumbs.db
 # Currently no files in Data/ exceed 50MB.
 *.zip
 Document/khanhnq/
+
+# Large binaries and raw text data
+Data/*.csv
+models/*.pkl
+models/*.h5

@@ -17,3 +17,4 @@ Thumbs.db
 # Following rule: files > 50MB are ignored
 # Currently no files in Data/ exceed 50MB.
 *.zip
+Document/khanhnq/

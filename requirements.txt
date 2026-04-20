@@ -1,0 +1,7 @@
+polars
+pandas
+matplotlib
+seaborn
+scikit-learn
+xgboost
+prophet

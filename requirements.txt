@@ -2,6 +2,12 @@ polars
 pandas
 matplotlib
 seaborn
+statsmodels
+pmdarima
 scikit-learn
 xgboost
 prophet
+ipykernel
+pyarrow
+plotly
+nbformat

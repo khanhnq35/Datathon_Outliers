@@ -104,11 +104,11 @@
 - Nếu Margin giảm → đây là insight quan trọng cho Diagnostic (Ngày 3)
 
 **✅ Checklist kiểm thử:**
-- [ ] Gross Margin trend hiển thị đúng
-- [ ] AOV trend hiển thị đúng
-- [ ] RPU trend hiển thị đúng
-- [ ] Đã highlight các điểm bất thường
-- [ ] Narrative giải thích xu hướng đã viết
+- [x] Gross Margin trend hiển thị đúng
+- [x] AOV trend hiển thị đúng
+- [x] RPU trend hiển thị đúng
+- [x] Đã highlight các điểm bất thường
+- [x] Narrative giải thích xu hướng đã viết
 
 ---
 
@@ -427,7 +427,7 @@
 | Ngày | Task chính | Status |
 |------|-----------|--------|
 | 20/04 | Đọc đề + Lập outline report | ⏳ (1.1 Done) |
-| 21/04 | M❶ Descriptive: Revenue, Margin, AOV | ⏳ (2.1 Done) |
+| 21/04 | M❶ Descriptive: Revenue, Margin, AOV | ✅ |
 | 22/04 | M❶ Diagnostic: Margin squeeze, Segment | ⬜ |
 | 23/04 | M❶ Predictive + Narrative end-to-end | ⬜ |
 | 24/04 | Tổng hợp 5 module + Top 5 stories | ⬜ |

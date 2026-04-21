@@ -107,7 +107,7 @@ Dưới đây là danh sách các task Jira được nhóm theo từng thành vi
 | **[20/04-EDA-16.1]** | Phân tích Sales: Trend & Season | Phân rã time-series: trend, seasonality. | `01_sales_trend.ipynb` | High | `eda` | 20/04 |
 | **[20/04-EDA-16.2]** | Phân tích Sales: ADF Stationarity | ADF Test xác nhận stationarity. | `01_sales_adf.ipynb` | High | `eda` | 20/04 |
 | **[21/04-FORE-01.1]** | Baseline ARIMA/Prophet | Build model baseline. | `02_baseline_forecast.ipynb` | Highest | `forecasting` | 21/04 |
-| **[21/04-FORE-01.2]** | Kaggle Submit lần 1 | Submit baseline, check output format. | `submission_baseline.csv` | Highest | `forecasting` | 21/04 |
+| **[21/04-FORE-01.2]** | Kaggle Format Check (Lần 1) | Chạy batch submit qua Kaggle check lỗi structure output submission. | `submission_baseline.csv` | Highest | `forecasting` | 21/04 |
 | **[22/04-FORE-06.1]** | FE: Lags & Rolling features | Lags, rolling mean/std, datetime features. | `src/features.py` | High | `forecasting` | 22/04 |
 | **[22/04-FORE-06.2]** | FE: Exogenous components | Ghép traffic, inventory, promotions vào train data. | `data/processed_train.csv` | High | `forecasting` | 22/04 |
 | **[23/04-FORE-02.1]** | Model v2: LightGBM/XGBoost | Gradient boost với FE mới. | `03_lgbm_forecast.ipynb` | Highest | `forecasting` | 23/04 |

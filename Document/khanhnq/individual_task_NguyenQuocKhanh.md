@@ -14,9 +14,9 @@
 ## 📅 Lịch trình chi tiết (10 ngày)
 
 ### Ngày 1: Setup & Foundations
-- [ ] Setup GitHub repository & cấu trúc dự án.
-- [ ] Tạo branch cho tất cả thành viên.
-- [ ] Viết script load dữ liệu chung (`src/data_loader.py`) bằng **Polars**.
+- [x] Setup GitHub repository & cấu trúc dự án.
+- [x] Tạo branch cho tất cả thành viên.
+- [x] Viết script load dữ liệu chung (`src/data_loader.py`) bằng **Polars**.
 
 ### Ngày 2: MCQ Review & FE Design
 - [ ] Review code giải MCQ của Lưu Nguyễn Thiện Nhân.
@@ -57,7 +57,7 @@
 
 ---
 
-## ✅ Trạng thái hoàn thành: `5%`
+## ✅ Trạng thái hoàn thành: `20%`
 - **Total tasks:** 20
-- **Completed:** 1
+- **Completed:** 4
 - **In Progress:** 0

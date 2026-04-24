@@ -24,14 +24,14 @@
 - [x] Thiết kế pipeline Feature Engineering cho phần Forecasting.
 
 ### Ngày 3: EDA Descriptive — Module ❹ & ❺
-- [ ] **Module ❹**: Phân tích Delivery performance, Fulfillment rate, Return cost tổng quan.
+- [x] **Module ❹**: Phân tích Delivery performance, Fulfillment rate, Return cost tổng quan.
 - [ ] **Module ❺**: Traffic overview, Channel attribution, Conversion rate theo kênh.
-- [ ] Output: `02_M4_operations_overview.ipynb` + `02_M5_marketing_overview.ipynb`.
+- [x] Output: `02_M4_operations_overview.ipynb` + `02_M5_marketing_overview.ipynb`.
 
 ### Ngày 4: EDA Diagnostic — Module ❹ & ❺
-- [ ] **Module ❹**: Phân tích Stockout impact (lost revenue), Overstock cost, Delivery gap theo vùng.
+- [x] **Module ❹**: Phân tích Stockout impact (lost revenue), Overstock cost, Delivery gap theo vùng.
 - [ ] **Module ❺**: Promo ROI, Promotion Paradox (trước/trong/sau KM), Bounce rate analysis.
-- [ ] Output: `03_M4_supply_chain_diagnostic.ipynb` + `03_M5_promo_effectiveness.ipynb`.
+- [x] Output: `03_M4_supply_chain_diagnostic.ipynb` + `03_M5_promo_effectiveness.ipynb`.
 
 ### Ngày 5: EDA Prescriptive — Module ❹ & ❺
 - [ ] **Module ❹**: Đề xuất reorder point, giảm delivery time, size guide ROI.

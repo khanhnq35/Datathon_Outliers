@@ -21,6 +21,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from xgboost import XGBRegressor
+import joblib
 
 # Thêm src vào path để dùng các hàm từ ultimate_ensemble_day5.py
 sys.path.insert(0, str(Path(__file__).parent))
@@ -288,6 +289,13 @@ def main():
 
     # 2. Final model + SHAP
     model_rev, model_cogs, X_full = run_final_submission(df_train, df_sub)
+
+    # 3. Save Checkpoints (Nhiệm vụ Ngày 7)
+    MODELS_DIR = ROOT / "models"
+    MODELS_DIR.mkdir(parents=True, exist_ok=True)
+    joblib.dump(model_rev, MODELS_DIR / "final_model_revenue.pkl")
+    joblib.dump(model_cogs, MODELS_DIR / "final_model_cogs.pkl")
+    print(f"\n[SAVED] Model checkpoints -> {MODELS_DIR}")
 
     # SHAP dung 300 sample cuoi cung (validation proxy)
     X_shap = X_full.tail(300).reset_index(drop=True)

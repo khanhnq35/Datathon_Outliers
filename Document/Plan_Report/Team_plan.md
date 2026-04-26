@@ -57,51 +57,67 @@
 
 ---
 
-### Ngày 2 — Giải MCQ + Khởi động EDA
-> **Mục tiêu**: Hoàn thành MCQ (20đ chắc chắn), bắt đầu EDA.
+### 📦 Phân công EDA theo Module Kinh doanh
 
-| Người | Công việc | Output |
-|-------|-----------|--------|
-| **Nguyễn Quốc Khánh** | Review code MCQ của C. Bắt đầu thiết kế feature engineering pipeline cho Forecasting. | Code review + FE design doc |
-| **Lưu Nguyễn Thiện Nhân** | Viết code giải 10 câu MCQ (Q1→Q10). Mỗi câu = 1 cell code rõ ràng, có comment. | Notebook `01_mcq_answers.ipynb` |
-| **Hà Quốc Khánh** | Baseline forecasting model: ARIMA hoặc Prophet trên `sales.csv`. Submit lên Kaggle lần 1. | Notebook `01_baseline_forecast.ipynb` + Kaggle submission |
-| **Lê Bảo Khánh** | Bắt đầu phân tích EDA cấp Descriptive: tổng quan doanh thu theo thời gian, phân bố đơn hàng theo vùng/thành phố. | Draft EDA section 1 |
+> **Nguyên tắc**: Mỗi người sở hữu (own) 1-2 module end-to-end, tự chịu trách nhiệm làm từ Descriptive → Diagnostic → Predictive → Prescriptive cho module đó.
+
+| Module | Câu hỏi cốt lõi | Owner | Dữ liệu chính |
+|--------|-----------------|-------|---------------|
+| ❶ Tăng trưởng & Tài chính | Doanh nghiệp tăng trưởng hay suy giảm? | **Lê Bảo Khánh** | `sales`, `order_items`, `products` |
+| ❷ Khách hàng & Retention | KH trung thành đến mức nào? | **Lưu Nguyễn Thiện Nhân** | `customers`, `orders`, `payments`, `reviews` |
+| ❸ Sản phẩm & Pricing | Bán cái gì, giá bao nhiêu? | **Lưu Nguyễn Thiện Nhân** | `products`, `order_items`, `returns`, `inventory` |
+| ❹ Vận hành & Supply Chain | Vận hành có hiệu quả không? | **Nguyễn Quốc Khánh** | `inventory`, `shipments`, `returns`, `orders` |
+| ❺ Marketing & Digital | Kênh nào hiệu quả? | **Nguyễn Quốc Khánh** | `web_traffic`, `orders`, `promotions`, `customers` |
+
+> **Hà Quốc Khánh** tập trung 100% cho Forecasting. **Lê Bảo Khánh** ngoài Module ❶ còn giữ vai trò Tổng hợp & Narrative cho report.
 
 ---
 
-### Ngày 3 — EDA Descriptive & Diagnostic
-> **Mục tiêu**: Hoàn thành tầng Descriptive, bắt đầu Diagnostic.
+### Ngày 2 — Giải MCQ + Khởi động EDA
+> **Mục tiêu**: Hoàn thành MCQ (20đ chắc chắn), bắt đầu EDA Module ❶.
 
 | Người | Công việc | Output |
 |-------|-----------|--------|
-| **Nguyễn Quốc Khánh** | EDA: Phân tích hiệu quả khuyến mãi (`promotions` ↔ `order_items` ↔ `orders`). So sánh doanh thu có/không KM. | Notebook `02_promo_analysis.ipynb` |
-| **Lưu Nguyễn Thiện Nhân** | EDA: Phân tích hành vi khách hàng — RFM segmentation (`customers` ↔ `orders` ↔ `payments`). | Notebook `02_customer_rfm.ipynb` |
+| **Nguyễn Quốc Khánh** | Review code MCQ của Nhân. Bắt đầu thiết kế feature engineering pipeline cho Forecasting. | Code review + FE design doc |
+| **Lưu Nguyễn Thiện Nhân** | Viết code giải 10 câu MCQ (Q1→Q10). Mỗi câu = 1 cell code rõ ràng, có comment. | Notebook `01_mcq_answers.ipynb` |
+| **Hà Quốc Khánh** | Baseline forecasting model: ARIMA hoặc Prophet trên `sales.csv`. Submit lên Kaggle lần 1. | Notebook `01_baseline_forecast.ipynb` + Kaggle submission |
+| **Lê Bảo Khánh** | **Module ❶ Descriptive**: Revenue YoY trend, Gross Margin trend, AOV trend, Revenue per Customer (RPU). | Notebook `02_M1_revenue_health.ipynb` |
+
+---
+
+### Ngày 3 — EDA Descriptive (đa module) & bắt đầu Diagnostic
+> **Mục tiêu**: Mỗi người hoàn thành Descriptive cho module mình, bắt đầu Diagnostic.
+
+| Người | Công việc | Output |
+|-------|-----------|--------|
+| **Nguyễn Quốc Khánh** | **Module ❹ Descriptive**: Delivery performance, Fulfillment rate, Return cost tổng quan. **Module ❺ Descriptive**: Traffic overview, Channel attribution, Conversion rate theo kênh. | `02_M4_operations_overview.ipynb` + `02_M5_marketing_overview.ipynb` |
+| **Lưu Nguyễn Thiện Nhân** | **Module ❷ Descriptive**: Repeat Purchase Rate, Cohort Retention, RFM Segmentation (`customers` ↔ `orders` ↔ `payments`). | Notebook `02_M2_customer_retention.ipynb` |
 | **Hà Quốc Khánh** | Feature engineering cho Forecasting: tạo features từ `inventory`, `web_traffic`, `promotions`. | Script `features/build_features.py` |
-| **Lê Bảo Khánh** | EDA: Phân tích sản phẩm — Top sellers, margin analysis, seasonal trends theo category/segment. Viết narrative đi kèm biểu đồ. | Notebook `02_product_analysis.ipynb` + narrative |
+| **Lê Bảo Khánh** | **Module ❶ Diagnostic**: Tại sao margin giảm? COGS > Revenue cuối 2022. RPU trend. Revenue breakdown theo segment. Viết narrative đi kèm. | Notebook `03_M1_margin_diagnostic.ipynb` + narrative |
 
 ---
 
 ### Ngày 4 — EDA Diagnostic sâu
-> **Mục tiêu**: Trả lời "Tại sao?" — nguyên nhân gốc rễ.
+> **Mục tiêu**: Trả lời "Tại sao?" — nguyên nhân gốc rễ cho từng module.
 
 | Người | Công việc | Output |
 |-------|-----------|--------|
-| **Nguyễn Quốc Khánh** | EDA: Phân tích tồn kho vs. doanh thu — stockout impact, overstock cost. Kết nối `inventory` ↔ `sales`. | Notebook `03_inventory_impact.ipynb` |
-| **Lưu Nguyễn Thiện Nhân** | EDA: Phân tích trả hàng — return rate theo category, size, region. Root cause analysis. | Notebook `03_return_analysis.ipynb` |
+| **Nguyễn Quốc Khánh** | **Module ❹ Diagnostic**: Stockout impact (lost revenue), Overstock cost, Delivery gap theo vùng. **Module ❺ Diagnostic**: Promo ROI, Promotion Paradox (trước/trong/sau KM), Bounce rate analysis. | `03_M4_supply_chain_diagnostic.ipynb` + `03_M5_promo_effectiveness.ipynb` |
+| **Lưu Nguyễn Thiện Nhân** | **Module ❷ Diagnostic**: CLV, Acquisition Channel Effectiveness. **Module ❸ Descriptive**: BCG Matrix, Price vs. Volume, Size Distribution vs. Return Rate. | `03_M2_clv_analysis.ipynb` + `02_M3_product_portfolio.ipynb` |
 | **Hà Quốc Khánh** | Xây dựng model Forecasting v2: XGBoost/LightGBM với features mới. Submit Kaggle lần 2. | Notebook `02_advanced_forecast.ipynb` |
-| **Lê Bảo Khánh** | EDA: Phân tích web traffic ↔ conversion ↔ doanh thu. Kênh nào hiệu quả nhất? | Notebook `03_traffic_analysis.ipynb` + narrative |
+| **Lê Bảo Khánh** | **Module ❶ Predictive**: Revenue forecast interpretation (dùng output từ HQ Khánh). Viết narrative tổng hợp Module ❶ (Desc → Diag → Pred). | Notebook `04_M1_revenue_predictive.ipynb` + narrative |
 
 ---
 
 ### Ngày 5 — EDA Predictive & Prescriptive (Đạt 4 cấp độ)
-> **Mục tiêu**: Hoàn thành 4 cấp độ phân tích (Descriptive → Diagnostic → Predictive → Prescriptive) để đạt điểm tối đa rubric.
+> **Mục tiêu**: Hoàn thành 4 cấp độ phân tích cho tất cả 5 module để đạt điểm tối đa rubric.
 
 | Người | Công việc | Output |
 |-------|-----------|--------|
-| **Nguyễn Quốc Khánh** | EDA Predictive: Customer churn prediction — xác suất khách hàng không quay lại. | Notebook `04_churn_prediction.ipynb` |
-| **Lưu Nguyễn Thiện Nhân** | EDA Prescriptive: Đề xuất tối ưu pricing/discount dựa trên elasticity analysis. | Notebook `04_pricing_optimization.ipynb` |
+| **Nguyễn Quốc Khánh** | **Module ❹ Prescriptive**: Đề xuất reorder point, giảm delivery time, size guide ROI. **Module ❺ Prescriptive**: Tái phân bổ ngân sách marketing, chiến lược KM theo segment (fixed vs. percentage). | `04_M4_supply_prescriptive.ipynb` + `04_M5_marketing_prescriptive.ipynb` |
+| **Lưu Nguyễn Thiện Nhân** | **Module ❸ Diagnostic + Prescriptive**: Size × Return Rate, Color preference, đề xuất loại bỏ Dogs / mở rộng Premium. **Module ❷ Prescriptive**: Loyalty program cho Champions, Win-back campaign cho At Risk. | `03_M3_product_diagnostic.ipynb` + `04_M2_customer_prescriptive.ipynb` |
 | **Hà Quốc Khánh** | Forecasting v3: Ensemble model (XGBoost + Prophet + LSTM). Hyperparameter tuning. | Notebook `03_ensemble_forecast.ipynb` |
-| **Lê Bảo Khánh** | Tổng hợp toàn bộ EDA insights. Viết phần Prescriptive: actionable recommendations cho doanh nghiệp. | File `eda_insights_summary.md` |
+| **Lê Bảo Khánh** | **Tổng hợp 5 module**: Viết prescriptive recommendations xuyên suốt. Xây dựng "Top 5 câu chuyện" cho report (theo Business_Analytics.md §7). | File `eda_insights_summary.md` |
 
 ---
 
@@ -110,10 +126,10 @@
 
 | Người | Công việc | Output |
 |-------|-----------|--------|
-| **Nguyễn Quốc Khánh** | Review toàn bộ notebook EDA. Đảm bảo code quality, reproducibility. | Code review comments |
-| **Lưu Nguyễn Thiện Nhân** | Thiết kế & tạo các biểu đồ chất lượng cao: color palette thống nhất, tiêu đề, nhãn trục, chú thích đầy đủ. | Thư mục `figures/` |
+| **Nguyễn Quốc Khánh** | Review toàn bộ notebook EDA (5 module). Đảm bảo code quality, reproducibility. | Code review comments |
+| **Lưu Nguyễn Thiện Nhân** | Thiết kế & tạo các biểu đồ chất lượng cao cho tất cả modules: color palette thống nhất, tiêu đề, nhãn trục, chú thích đầy đủ. Export HQ figures. | Thư mục `figures/` |
 | **Hà Quốc Khánh** | Forecasting: Cross-validation đúng chiều thời gian. SHAP values / Feature importance. Submit Kaggle lần 3. | Notebook `04_final_forecast.ipynb` |
-| **Lê Bảo Khánh** | Viết narrative cho từng biểu đồ: mô tả, key findings (có số liệu), business implications. | Draft report sections |
+| **Lê Bảo Khánh** | Viết narrative cho từng biểu đồ across all modules: mô tả, key findings (có số liệu), business implications. | Draft report sections |
 
 ---
 

@@ -20,6 +20,7 @@ class DataLoader:
             "inventory": ["snapshot_date"],
             "web_traffic": ["date"],
             "sales": ["Date"],
+            "promotions": ["start_date", "end_date"],
         }
 
     def _get_file_path(self, table_name: str) -> Path:

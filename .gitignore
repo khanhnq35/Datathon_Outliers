@@ -21,5 +21,6 @@ Document/khanhnq/
 
 # Large binaries and raw text data
 Data/*.csv
+Data/*.parquet
 models/*.pkl
 models/*.h5
